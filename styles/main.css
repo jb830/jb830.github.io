@@ -1,0 +1,358 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  color: #333333;
+}
+
+a:hover {
+  opacity: .7;
+}
+
+.container {
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+#featured {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 3fr 4fr 1fr 1fr 14fr 3fr;
+      grid-template-columns: 3fr 3fr 4fr 1fr 1fr 14fr 3fr;
+  -ms-grid-rows: 2fr 1fr 2fr 3fr 1fr;
+      grid-template-rows: 2fr 1fr 2fr 3fr 1fr;
+  height: 92vh;
+}
+
+#featured #aside-l {
+  background-color: #c54068;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1/7;
+}
+
+#featured #aside-r {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
+  grid-column: 4/8;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1/7;
+}
+
+#featured img {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2/5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#featured h2 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
+  font-family: 'Sanchez', Courier, serif;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+#featured h2 span {
+  background: #f4e75a;
+  padding: 0 1rem;
+}
+
+#featured #type-first {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: typing 4s steps(30, end);
+          animation: typing 4s steps(30, end);
+}
+
+#featured #type-last {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/ 5;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: slidein 1600ms ease 1 normal, typing 4s steps(30, end);
+          animation: slidein 1600ms ease 1 normal, typing 4s steps(30, end);
+}
+
+#featured ul {
+  padding: 0;
+  margin: 7rem 0 0 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+
+#featured ul li {
+  padding: .25rem;
+}
+
+#featured ul li .nav-btn {
+  color: #333333;
+}
+
+#featured .social {
+  margin-top: 1rem;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
+  grid-column: 7/8;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#featured .social a > i {
+  padding: .25rem;
+  font-size: 1.4rem;
+  color: #000;
+}
+
+#gallery {
+  margin-top: 4rem;
+}
+
+#gallery .gallery-links {
+  margin: 0 auto;
+  width: 68%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row-wrap;
+          flex-flow: row-wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#gallery .gallery-links .gallery-item {
+  margin: 0;
+  width: 33%;
+}
+
+#gallery .gallery-links .gallery-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#about {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#about h2 {
+  margin-bottom: 1.3rem;
+  font-family: 'Sanchez', serif;
+  text-align: center;
+}
+
+#about p {
+  text-align: center;
+}
+
+#skills article h2 {
+  margin-bottom: 1.3rem;
+  font-family: 'Sanchez', serif;
+  text-align: center;
+}
+
+#skills article h4 {
+  text-decoration: none;
+  list-style-type: none;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  font-size: 1.3rem;
+}
+
+#contact .myform {
+  margin: 0 auto;
+  width: 40%;
+  background-color: #c54068;
+}
+
+#contact .myform form {
+  padding: 4rem;
+  color: #fff;
+}
+
+#contact .myform form h2 {
+  margin-bottom: 1.3rem;
+  font-family: 'Sanchez', serif;
+  text-align: center;
+}
+
+#contact .myform form .form-group {
+  margin: 1rem 2rem;
+}
+
+#contact .myform form .form-group:last-of-type {
+  padding-bottom: 2rem;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem 2rem 1rem 2rem;
+  background: #333333;
+  color: #f6f3ed;
+}
+
+.footer-row {
+  padding: 2rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-row a,
+.footer-row p {
+  color: #f6f3ed;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-col:nth-child(2) {
+  text-align: right;
+}
+
+.social {
+  text-align: center;
+}
+
+.social > a > i {
+  padding: .5rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  p,
+  li {
+    font-size: 12px;
+  }
+  h2,
+  h4 {
+    font-size: 1.1rem;
+  }
+  #type-first {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    font-size: 1.4rem;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    transition-property: none !important;
+    animation: none;
+    -webkit-animation: none;
+  }
+  #type-last {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+    animation: none;
+    -webkit-animation: none;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    transition-property: none !important;
+    animation: none;
+    -webkit-animation: none;
+  }
+  #skills article h4 {
+    font-size: .9rem;
+  }
+  #contact .myform {
+    width: 80%;
+  }
+  #contact .myform form {
+    padding: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
