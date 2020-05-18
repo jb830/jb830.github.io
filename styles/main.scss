@@ -77,19 +77,15 @@ a:hover {
 
   #type-first {
     grid-row: 2/3;
-    overflow: hidden;
-    white-space: nowrap;
-    animation:
-      typing 4s steps(30, end);
   }
 
   #type-last {
     grid-row: 3/ 5;
-    overflow: hidden;
-    white-space: nowrap;
-    animation:
-      slidein 1600ms ease 1 normal,
-      typing 4s steps(30, end);
+    // overflow: hidden;
+    // white-space: nowrap;
+    // animation:
+    //   slidein 1600ms ease 1 normal,
+    //   typing 4s steps(30, end);
   }
 
   ul {

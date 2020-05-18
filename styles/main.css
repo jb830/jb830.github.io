@@ -79,20 +79,12 @@ a:hover {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-animation: typing 4s steps(30, end);
-          animation: typing 4s steps(30, end);
 }
 
 #featured #type-last {
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   grid-row: 3/ 5;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-animation: slidein 1600ms ease 1 normal, typing 4s steps(30, end);
-          animation: slidein 1600ms ease 1 normal, typing 4s steps(30, end);
 }
 
 #featured ul {
