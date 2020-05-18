@@ -46,7 +46,7 @@ a:hover {
 
   #aside-l {
     background-color: $primary-color;
-    // background-color: #000;
+    background-color: #000;
     grid-column: 1/4;
     grid-row: 1/7;
   }
@@ -66,12 +66,12 @@ a:hover {
   h2 {
     grid-column: 6/7;
     font-family: 'Sanchez', Courier, serif;
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: 4rem;
 
     span {
       background: rgb(244, 231, 90);
-      padding: 0 1rem;
+      // padding: 0 1rem;
     }
   }
 
@@ -80,7 +80,7 @@ a:hover {
   }
 
   #type-last {
-    grid-row: 3/ 5;
+    grid-row: 3/5;
     // overflow: hidden;
     // white-space: nowrap;
     // animation:
@@ -109,10 +109,10 @@ a:hover {
     grid-column: 7/8;
     grid-row: 1/2;
 
-    a>i {
+    a > i {
       padding: .25rem;
-      font-size: 1.4rem;
-      color: #000;
+      font-size: 2rem;
+      color: $primary-color;
     }
   }
 }
@@ -258,7 +258,6 @@ footer {
 }
 
 @media (max-width: 800px) {
-
   p,
   li {
     font-size: 12px;
@@ -268,24 +267,39 @@ footer {
   h4 {
     font-size: 1.1rem;
   }
-
-  #type-first {
-    grid-row: 2/3;
-    font-size: 1.4rem;
-    transition-property: none !important;
-    transition-property: none !important;
-    animation: none;
-    -webkit-animation: none;
+  .container {
+    padding-top: 3rem;
+    margin-bottom: 1rem;;
   }
-
-  #type-last {
-    grid-row: 3/5;
-    animation: none;
-    -webkit-animation: none;
-    transition-property: none !important;
-    transition-property: none !important;
-    animation: none;
-    -webkit-animation: none;
+  #featured {
+    .social {
+      margin-top: .5rem;
+      grid-column: 6/span 8;
+      grid-row: 1/2;
+      color: black;
+      text-align: right;
+    }
+    img {
+      display: none;
+    }
+    #type-first {
+      grid-row: 2/3;
+      // font-size: 1.6rem;
+      transition-property: none !important;
+      transition-property: none !important;
+      animation: none;
+      -webkit-animation: none;
+    }
+    #type-last {
+      grid-row: 3/5;
+      // font-size: 1.6rem;
+      animation: none;
+      -webkit-animation: none;
+      transition-property: none !important;
+      transition-property: none !important;
+      animation: none;
+      -webkit-animation: none;
+    }
   }
 
   #skills {
@@ -298,11 +312,14 @@ footer {
 
   #contact {
     .myform {
-      width: 80%;
+      width: 90%;
 
       form {
         padding: 2rem;
       }
     }
+  }
+  .footer-row {
+    padding: 0;
   }
 }

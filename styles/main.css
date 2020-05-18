@@ -31,6 +31,7 @@ a:hover {
 
 #featured #aside-l {
   background-color: #c54068;
+  background-color: #000;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
@@ -66,13 +67,12 @@ a:hover {
   -ms-grid-column-span: 1;
   grid-column: 6/7;
   font-family: 'Sanchez', Courier, serif;
-  font-size: 2rem;
+  font-size: 2.4rem;
   line-height: 4rem;
 }
 
 #featured h2 span {
   background: #f4e75a;
-  padding: 0 1rem;
 }
 
 #featured #type-first {
@@ -84,7 +84,7 @@ a:hover {
 #featured #type-last {
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
-  grid-row: 3/ 5;
+  grid-row: 3/5;
 }
 
 #featured ul {
@@ -125,8 +125,8 @@ a:hover {
 
 #featured .social a > i {
   padding: .25rem;
-  font-size: 1.4rem;
-  color: #000;
+  font-size: 2rem;
+  color: #c54068;
 }
 
 #gallery {
@@ -314,18 +314,35 @@ footer {
   h4 {
     font-size: 1.1rem;
   }
-  #type-first {
+  .container {
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  #featured .social {
+    margin-top: .5rem;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 8;
+    grid-column: 6/span 8;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    color: black;
+    text-align: right;
+  }
+  #featured img {
+    display: none;
+  }
+  #featured #type-first {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
-    font-size: 1.4rem;
     -webkit-transition-property: none !important;
     transition-property: none !important;
     transition-property: none !important;
     animation: none;
     -webkit-animation: none;
   }
-  #type-last {
+  #featured #type-last {
     -ms-grid-row: 3;
     -ms-grid-row-span: 2;
     grid-row: 3/5;
@@ -341,10 +358,13 @@ footer {
     font-size: .9rem;
   }
   #contact .myform {
-    width: 80%;
+    width: 90%;
   }
   #contact .myform form {
     padding: 2rem;
+  }
+  .footer-row {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
