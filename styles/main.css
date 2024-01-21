@@ -1,13 +1,31 @@
+/* 
+* ==========================================================================
+* Variables, Mixins, and Components 
+* ==========================================================================
+*/
+.container {
+  padding: 4rem 0;
+}
+
+.container-bg {
+  background-color: #F5F5F5;
+}
+
+/* 
+* ==========================================================================
+* Global styles
+* ==========================================================================
+*/
 html,
 body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 a {
-  color: #333333;
+  color: rgb(51, 51, 51);
 }
 
 ul {
@@ -15,236 +33,151 @@ ul {
   padding: 0;
 }
 
-.container {
-  padding-top: 5rem;
-  margin-bottom: 3rem;
-}
-
+/* 
+* ==========================================================================
+* Header & Navigation
+* ==========================================================================
+*/
 nav {
   text-decoration: none;
   list-style-type: none;
-  color: #333333;
+  color: rgb(51, 51, 51);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: #c54068;
+  letter-spacing: 1px;
+  background-color: rgb(197, 64, 104);
 }
-
+nav .nav-item {
+  padding-left: 0.7rem;
+}
 nav a {
   color: #fff;
 }
-
 nav a:hover {
   color: rgba(252, 252, 252, 0.7);
 }
 
-.diagrams .gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.diagrams .gallery .diagram-gallery {
-  margin: 1rem;
-  width: 30%;
-}
-
-.diagrams .gallery .diagram-gallery:hover {
-  -webkit-box-shadow: 5px 5px 5px 5px #a3a3a3;
-          box-shadow: 5px 5px 5px 5px #a3a3a3;
-}
-
-.diagrams .gallery .diagram-gallery img {
-  width: 100%;
-  height: auto;
-  padding: 2rem;
-}
-
-.diagrams .gallery .desc {
-  padding: 2rem;
-  text-align: center;
-}
-
+/* 
+* ==========================================================================
+* Home Page Styles
+* ==========================================================================
+*/
 #featured {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 3fr 4fr 1fr 1fr 14fr 3fr;
-      grid-template-columns: 3fr 3fr 4fr 1fr 1fr 14fr 3fr;
-  -ms-grid-rows: 2fr 1fr 2fr 3fr 1fr 1fr;
-      grid-template-rows: 2fr 1fr 2fr 3fr 1fr 1fr;
+  grid-template-columns: 3fr 3fr 4fr 1fr 1fr 14fr 3fr;
+  grid-template-rows: 2fr 1fr 2fr 3fr 1fr 1fr;
   height: 92vh;
 }
-
 #featured #aside-l {
-  background-color: #c54068;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  background-color: rgb(197, 64, 104);
   grid-column: 1/4;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 6;
   grid-row: 1/7;
 }
-
 #featured #aside-r {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 4;
   grid-column: 4/8;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 6;
   grid-row: 1/7;
 }
-
 #featured .line {
-  -ms-grid-column: 1;
   grid-column: 1/1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
   grid-row: 2/6;
   border-left: 1px solid #fff;
   margin: 4rem;
 }
-
 #featured .welcome {
-  -ms-grid-column: 1;
   grid-column: 1/1;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 2;
   grid-row: 4/6;
 }
-
 #featured .welcome h1 {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  font-family: 'Quicksand', sans-serif;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: "Quicksand", sans-serif;
   letter-spacing: 3px;
   font-weight: 200;
   color: #fff;
-  background-color: #c54068;
+  background-color: rgb(197, 64, 104);
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 3rem;
 }
-
 #featured img {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
   grid-column: 2/5;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
   grid-row: 2/6;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #featured h2 {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 1;
   grid-column: 6/7;
-  font-family: 'Sanchez', Courier, serif;
+  font-family: "Sanchez", Courier, serif;
   font-size: 2.6rem;
   line-height: 4rem;
 }
-
 #featured h2 span {
-  background: #f4e75a;
+  background: rgb(244, 231, 90);
   padding: 0 1rem;
 }
-
 #featured .intro {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 2;
   grid-column: 6/8;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
   grid-row: 3/5;
 }
-
 #featured ul {
   padding: 0;
   margin: 7rem 0 0 0;
   text-decoration: none;
   list-style-type: none;
-  color: #333333;
+  color: rgb(51, 51, 51);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 1;
+  letter-spacing: 1px;
   grid-column: 6/7;
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
   grid-row: 5/6;
 }
-
 #featured ul li {
-  padding: .25rem;
+  padding: 0.25rem;
 }
-
 #featured ul li .nav-btn {
-  color: #333333;
+  color: rgb(51, 51, 51);
 }
-
 #featured .social {
   margin-top: 1rem;
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 1;
   grid-column: 7/8;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
   grid-row: 1/2;
 }
-
 #featured .social a > i {
-  padding: .25rem;
+  padding: 0.25rem;
   font-size: 1.9rem;
-  color: #333333;
+  color: rgb(51, 51, 51);
 }
 
-#gallery {
-  margin-top: 4rem;
-}
-
+/* 
+* ==========================================================================
+* Recent Projects Styles
+* ==========================================================================
+*/
 #gallery h2 {
-  margin-bottom: 1.3rem;
-  font-family: 'Sanchez', serif;
+  margin-bottom: 2rem;
+  font-family: "Sanchez", serif;
   text-align: center;
   padding-bottom: 2rem;
 }
-
 #gallery .gallery-links {
   margin: 0 auto;
   width: 68%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 #gallery .gallery-links .gallery-item {
   margin: 0;
   width: 33%;
   position: relative;
 }
-
 #gallery .gallery-links .gallery-item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #gallery .gallery-links .gallery-item .overlay-text {
   padding: 2rem;
   text-align: center;
@@ -258,114 +191,133 @@ nav a:hover {
   right: 0;
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  transition: all 0.4s;
 }
-
 #gallery .gallery-links .gallery-item:hover > a > .overlay-text {
   visibility: visible;
 }
 
+/* 
+* ==========================================================================
+* About Styles
+* ==========================================================================
+*/
 #about {
   margin: 0 auto;
   width: 80%;
 }
-
 #about h2 {
-  margin-bottom: 1.3rem;
-  font-family: 'Sanchez', serif;
+  margin-bottom: 2rem;
+  font-family: "Sanchez", serif;
   text-align: center;
 }
-
 #about p {
   text-align: center;
 }
 
 #skills h2 {
-  margin-bottom: 1.3rem;
-  font-family: 'Sanchez', serif;
+  margin-bottom: 2rem;
+  font-family: "Sanchez", serif;
   text-align: center;
 }
-
 #skills .skill-columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
-#skills .skill-columns article h4 {
+#skills .skill-columns h4 {
+  color: rgb(197, 64, 104);
   text-decoration: none;
   list-style-type: none;
-  color: #333333;
+  color: rgb(51, 51, 51);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
 
-#skills .skill-columns article:last-of-type {
-  text-align: center;
-}
-
-#contact .myform {
+/* 
+* ==========================================================================
+* Contact Styles
+* ==========================================================================
+*/
+#contact .contact-form {
   margin: 0 auto;
   width: 40%;
-  background-color: #c54068;
+  background-color: rgb(197, 64, 104);
 }
-
-#contact .myform form {
+#contact .contact-form form {
   padding: 4rem;
   color: #fff;
 }
-
-#contact .myform form h2 {
-  margin-bottom: 1.3rem;
-  font-family: 'Sanchez', serif;
+#contact .contact-form form h2 {
+  margin-bottom: 2rem;
+  font-family: "Sanchez", serif;
   text-align: center;
 }
-
-#contact .myform form .form-group {
+#contact .contact-form form .form-group {
   margin: 1rem 2rem;
 }
-
-#contact .myform form .form-group:last-of-type {
+#contact .contact-form form .form-group:last-of-type {
   padding-bottom: 2rem;
 }
 
+/* 
+* ==========================================================================
+* Diargram Page Styles
+* ==========================================================================
+*/
+.diagrams h2 {
+  margin-bottom: 2rem;
+  font-family: "Sanchez", serif;
+  text-align: center;
+  text-align: center;
+}
+.diagrams .diagram-gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  text-align: center;
+}
+.diagrams .diagram-gallery .odd {
+  width: 60%;
+}
+.diagrams .diagram-gallery .even {
+  width: 30%;
+}
+.diagrams .diagram-gallery .diagram-item img {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+}
+
+/* 
+* ==========================================================================
+* Footer and footer navigation 
+* ==========================================================================
+*/
 footer {
-  margin-top: 4rem;
   padding: 2rem 2rem 1rem 2rem;
-  background: #333333;
-  color: #f6f3ed;
+  background: rgb(51, 51, 51);
+  color: rgb(246, 243, 237);
 }
 
 .footer-row {
   padding: 2rem 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footer-row a,
 .footer-row p {
-  color: #f6f3ed;
+  color: rgb(246, 243, 237);
   font-style: normal;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer-col:nth-child(2) {
@@ -377,7 +329,7 @@ footer {
 }
 
 .social > a > i {
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 1.8rem;
   color: #fff;
 }
@@ -386,6 +338,11 @@ footer {
   text-align: center;
 }
 
+/* 
+* ==========================================================================
+* Media Queries
+* ==========================================================================
+*/
 @media (max-width: 800px) {
   p,
   li {
@@ -400,17 +357,11 @@ footer {
     margin-bottom: 1rem;
   }
   #featured #aside-l {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
     grid-column: 1/2;
   }
   #featured .social {
-    margin-top: .5rem;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 8;
+    margin-top: 0.5rem;
     grid-column: 6/span 8;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     grid-row: 1/2;
     color: black;
     text-align: right;
@@ -419,16 +370,13 @@ footer {
     display: none;
   }
   #featured .intro {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 4;
     grid-column: 3/7;
   }
   #featured .intro h2 {
+    padding: 2rem;
     font-size: 2rem;
   }
   #featured ul {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 4;
     grid-column: 3/7;
   }
   #gallery .gallery-links {
@@ -441,19 +389,13 @@ footer {
     visibility: none;
   }
   #gallery .gallery-links .gallery-item6 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   #gallery .gallery-links .gallery-item4 {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
   #skills .skill-columns {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   #skills .skill-columns article {
     width: 80%;
@@ -473,5 +415,4 @@ footer {
   .footer-row {
     padding: 0;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
