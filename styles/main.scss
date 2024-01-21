@@ -1,3 +1,8 @@
+/* 
+* ==========================================================================
+* Variables, Mixins, and Components 
+* ==========================================================================
+*/
 $primary-color: rgb(197, 64, 104);
 $secondary-color: rgba(51, 51, 51, 1);
 
@@ -6,17 +11,29 @@ $secondary-color: rgba(51, 51, 51, 1);
   list-style-type: none;
   color: $secondary-color;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 @mixin main-heading {
-  margin-bottom: 1.3rem;
+  margin-bottom: 2rem;
   font-family: 'Sanchez', serif;
   text-align: center;
 }
 
+.container {
+  padding: 4rem 0;
+}
+
+.container-bg {
+  background-color: #F5F5F5;
+}
+/* 
+* ==========================================================================
+* Global styles
+* ==========================================================================
+*/
 html,
 body {
   padding: 0;
@@ -28,51 +45,39 @@ body {
 a {
   color: $secondary-color;
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
 
-.container {
-  padding-top: 5rem;
-  margin-bottom: 3rem;
-}
+/* 
+* ==========================================================================
+* Header & Navigation
+* ==========================================================================
+*/
 nav {
+  .nav-item {
+    padding-left: .7rem;
+  }
+
   @include list-items();
   background-color: $primary-color;
+
   a {
     color: #fff;
   }
+
   a:hover {
     color: rgba(252, 252, 252, .7);
   }
 }
-.diagrams {
-  .gallery {
-    display: flex;
-    justify-content: center;
-    
-    .diagram-gallery {
-      margin: 1rem;
-      width: 30%;
-    }
-    
-    .diagram-gallery:hover {
-      box-shadow: 5px 5px 5px 5px #a3a3a3;
-    }
-    
-    .diagram-gallery img {
-      width: 100%;
-      height: auto;
-      padding: 2rem;
-    }
-    
-    .desc {
-      padding: 2rem;
-      text-align: center;
-    }
-  } 
-}
+
+/* 
+* ==========================================================================
+* Home Page Styles
+* ==========================================================================
+*/
 #featured {
   display: grid;
   grid-template-columns: 3fr 3fr 4fr 1fr 1fr 14fr 3fr;
@@ -168,8 +173,12 @@ nav {
   }
 }
 
+/* 
+* ==========================================================================
+* Recent Projects Styles
+* ==========================================================================
+*/
 #gallery {
-  margin-top: 4rem;
 
   h2 {
     @include main-heading();
@@ -217,6 +226,11 @@ nav {
   }
 }
 
+/* 
+* ==========================================================================
+* About Styles
+* ==========================================================================
+*/
 #about {
   margin: 0 auto;
   width: 80%;
@@ -240,23 +254,23 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    article {
       h4 {
+        color: $primary-color;
         @include list-items;
         margin-top: 2rem;
         margin-bottom: .5rem;
         font-size: 1.3rem;
       }
-    }
-
-    article:last-of-type {
-      text-align: center;
-    }
   }
 }
 
+/* 
+* ==========================================================================
+* Contact Styles
+* ==========================================================================
+*/
 #contact {
-  .myform {
+  .contact-form {
     margin: 0 auto;
     width: 40%;
     background-color: rgb(197, 64, 104);
@@ -280,13 +294,50 @@ nav {
   }
 }
 
+/* 
+* ==========================================================================
+* Diargram Page Styles
+* ==========================================================================
+*/
+.diagrams {
+  h2 {
+    @include main-heading();
+    text-align: center;
+  }
+
+  .diagram-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    text-align: center;
 
 
+    // .diagram-item {
 
+    // }
+    .odd {
+      width: 60%;
+    }
 
+    .even {
+      width: 30%;
+    }
 
+    .diagram-item img {
+      width: 100%;
+      height: auto;
+      padding: 2rem;
+    }
+  }
+}
+
+/* 
+* ==========================================================================
+* Footer and footer navigation 
+* ==========================================================================
+*/
 footer {
-  margin-top: 4rem;
   padding: 2rem 2rem 1rem 2rem;
   background: rgb(51, 51, 51);
   color: rgb(246, 243, 237);
@@ -326,6 +377,11 @@ footer {
   text-align: center;
 }
 
+/* 
+* ==========================================================================
+* Media Queries
+* ==========================================================================
+*/
 @media (max-width: 800px) {
 
   p,
@@ -356,15 +412,20 @@ footer {
       color: black;
       text-align: right;
     }
+
     img {
       display: none;
     }
+
     .intro {
       grid-column: 3/7;
+
       h2 {
+        padding: 2rem;
         font-size: 2rem;
       }
     }
+
     ul {
       grid-column: 3/7;
     }
@@ -377,12 +438,15 @@ footer {
       .gallery-item {
         width: 50%;
       }
+
       .gallery-item:hover>a>.overlay-text {
         visibility: none;
       }
+
       .gallery-item6 {
         order: 1;
       }
+
       .gallery-item4 {
         order: 3;
       }
@@ -392,12 +456,15 @@ footer {
   #skills {
     .skill-columns {
       justify-content: center;
+
       article {
         width: 80%;
+
         h4 {
           font-size: 1rem;
         }
       }
+
       article:last-of-type {
         text-align: left;
       }
