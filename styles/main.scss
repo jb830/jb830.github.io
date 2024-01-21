@@ -57,18 +57,19 @@ ul {
 * ==========================================================================
 */
 nav {
+  @include list-items();
+  background-color: $primary-color;  
+  
   .nav-item {
     padding-left: .7rem;
   }
-
-  @include list-items();
-  background-color: $primary-color;
-
-  a {
+  .nav-link {
     color: #fff;
   }
-
-  a:hover {
+  .nav-link:hover {
+    color: rgba(252, 252, 252, .7);
+  }
+  .current {
     color: rgba(252, 252, 252, .7);
   }
 }
@@ -344,9 +345,7 @@ footer {
 }
 
 .footer-row {
-  padding: 2rem 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
