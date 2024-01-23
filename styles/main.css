@@ -38,7 +38,7 @@ ul {
 * Header & Navigation
 * ==========================================================================
 */
-nav {
+.navbar {
   text-decoration: none;
   list-style-type: none;
   color: rgb(51, 51, 51);
@@ -48,17 +48,59 @@ nav {
   letter-spacing: 1px;
   background-color: rgb(197, 64, 104);
 }
-nav .nav-item {
+.navbar .nav-item {
   padding-left: 0.7rem;
 }
-nav .nav-link {
+.navbar .nav-link {
   color: #fff;
 }
-nav .nav-link:hover {
+.navbar .nav-link:hover {
   color: rgba(252, 252, 252, 0.7);
 }
-nav .current {
+.navbar .current {
   color: rgba(252, 252, 252, 0.7);
+}
+
+/* 
+* ==========================================================================
+* Footer and footer navigation 
+* ==========================================================================
+*/
+footer {
+  padding: 2rem 2rem 1rem 2rem;
+  background: rgb(51, 51, 51);
+  color: rgb(246, 243, 237);
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-row a,
+.footer-row p {
+  color: rgb(246, 243, 237);
+  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-col:nth-child(2) {
+  text-align: right;
+}
+
+.social {
+  text-align: center;
+}
+
+.social > a > i {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
 }
 
 /* 
@@ -111,14 +153,13 @@ nav .current {
      object-fit: cover;
 }
 #featured h2 {
-  grid-column: 6/7;
   font-family: "Sanchez", Courier, serif;
   font-size: 2.6rem;
   line-height: 4rem;
 }
-#featured h2 span {
-  background: rgb(244, 231, 90);
-  padding: 0 1rem;
+#featured .header-style {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, rgb(244, 231, 90) 55%);
+  display: inline;
 }
 #featured .intro {
   grid-column: 6/8;
@@ -273,71 +314,29 @@ nav .current {
 * Diargram Page Styles
 * ==========================================================================
 */
-.diagrams h2 {
+#diagrams h2 {
   margin-bottom: 2rem;
   font-family: "Sanchez", serif;
   text-align: center;
   text-align: center;
 }
-.diagrams .diagram-gallery {
+#diagrams .diagram-gallery {
+  padding-top: 3rem;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
-  gap: 1rem;
+  gap: 4rem;
   text-align: center;
 }
-.diagrams .diagram-gallery .odd {
-  width: 60%;
+#diagrams .diagram-gallery .odd {
+  flex: 1 1 60%;
 }
-.diagrams .diagram-gallery .even {
-  width: 30%;
+#diagrams .diagram-gallery .even {
+  flex: 1 1 30%;
 }
-.diagrams .diagram-gallery .diagram-item img {
+#diagrams .diagram-gallery .diagram-item img {
   width: 100%;
   height: auto;
-  padding: 2rem;
-}
-
-/* 
-* ==========================================================================
-* Footer and footer navigation 
-* ==========================================================================
-*/
-footer {
-  padding: 2rem 2rem 1rem 2rem;
-  background: rgb(51, 51, 51);
-  color: rgb(246, 243, 237);
-}
-
-.footer-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.footer-row a,
-.footer-row p {
-  color: rgb(246, 243, 237);
-  font-style: normal;
-  font-family: "Montserrat", sans-serif;
-}
-
-.footer-col:nth-child(2) {
-  text-align: right;
-}
-
-.social {
-  text-align: center;
-}
-
-.social > a > i {
-  padding: 0.5rem;
-  font-size: 1.8rem;
-  color: #fff;
-}
-
-.copyright {
-  text-align: center;
 }
 
 /* 
@@ -345,18 +344,17 @@ footer {
 * Media Queries
 * ==========================================================================
 */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   p,
   li {
-    font-size: 12px;
-  }
-  h2,
-  h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .container {
     padding-top: 3rem;
     margin-bottom: 1rem;
+  }
+  #featured li {
+    font-size: 1rem;
   }
   #featured #aside-l {
     grid-column: 1/2;
@@ -372,23 +370,26 @@ footer {
     display: none;
   }
   #featured .intro {
-    grid-column: 3/7;
+    grid-column: 2/8;
   }
-  #featured .intro h2 {
+  #featured .intro .header-style {
+    background: none;
+    display: inherit;
     padding: 2rem;
     font-size: 2rem;
+    line-height: 2.4rem;
   }
   #featured ul {
     grid-column: 3/7;
   }
+  #gallery h2 {
+    margin: 0;
+  }
   #gallery .gallery-links {
-    width: 80%;
+    width: 100%;
   }
   #gallery .gallery-links .gallery-item {
     width: 50%;
-  }
-  #gallery .gallery-links .gallery-item:hover > a > .overlay-text {
-    visibility: none;
   }
   #gallery .gallery-links .gallery-item6 {
     order: 1;
@@ -408,13 +409,31 @@ footer {
   #skills .skill-columns article:last-of-type {
     text-align: left;
   }
-  #contact .myform {
+  #contact .contact-form {
     width: 90%;
   }
-  #contact .myform form {
-    padding: 2rem;
+  #contact .contact-form form {
+    padding: 1rem;
+  }
+  #contact .contact-form form h2 {
+    margin: 0;
+    padding: 2rem 0 0 0;
+  }
+  #diagrams .diagram-gallery {
+    padding: 1rem 0;
+    gap: 1rem;
   }
   .footer-row {
     padding: 0;
+  }
+}
+@media (max-width: 576px) {
+  #diagrams h2 {
+    margin-bottom: 1rem;
+  }
+  #diagrams .diagram-gallery .odd,
+  #diagrams .diagram-gallery .even {
+    flex-basis: 100%;
+    padding: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */
