@@ -29,6 +29,7 @@ $secondary-color: rgba(51, 51, 51, 1);
 .container-bg {
   background-color: #F5F5F5;
 }
+
 /* 
 * ==========================================================================
 * Global styles
@@ -56,24 +57,67 @@ ul {
 * Header & Navigation
 * ==========================================================================
 */
-nav {
+.navbar {
   @include list-items();
-  background-color: $primary-color;  
-  
+  background-color: $primary-color;
+
   .nav-item {
     padding-left: .7rem;
   }
+
   .nav-link {
     color: #fff;
   }
+
   .nav-link:hover {
     color: rgba(252, 252, 252, .7);
   }
+
   .current {
     color: rgba(252, 252, 252, .7);
   }
 }
+/* 
+* ==========================================================================
+* Footer and footer navigation 
+* ==========================================================================
+*/
+footer {
+  padding: 2rem 2rem 1rem 2rem;
+  background: rgb(51, 51, 51);
+  color: rgb(246, 243, 237);
+}
 
+.footer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-row a,
+.footer-row p {
+  color: rgb(246, 243, 237);
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-col:nth-child(2) {
+  text-align: right;
+}
+
+.social {
+  text-align: center;
+}
+
+.social>a>i {
+  padding: .5rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+}
 /* 
 * ==========================================================================
 * Home Page Styles
@@ -129,15 +173,15 @@ nav {
   }
 
   h2 {
-    grid-column: 6/7;
+    // grid-column: 6/7;
     font-family: 'Sanchez', Courier, serif;
     font-size: 2.6rem;
     line-height: 4rem;
+  }
 
-    span {
-      background: rgb(244, 231, 90);
-      padding: 0 1rem;
-    }
+  .header-style {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, rgb(244, 231, 90) 55%);
+    display: inline;
   }
 
   .intro {
@@ -255,13 +299,13 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
 
-      h4 {
-        color: $primary-color;
-        @include list-items;
-        margin-top: 2rem;
-        margin-bottom: .5rem;
-        font-size: 1.3rem;
-      }
+    h4 {
+      color: $primary-color;
+      @include list-items;
+      margin-top: 2rem;
+      margin-bottom: .5rem;
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -300,97 +344,53 @@ nav {
 * Diargram Page Styles
 * ==========================================================================
 */
-.diagrams {
+#diagrams {
   h2 {
     @include main-heading();
     text-align: center;
   }
 
   .diagram-gallery {
+    padding-top: 3rem;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 1rem;
+    gap: 4rem;
     text-align: center;
 
-
-    // .diagram-item {
-
-    // }
     .odd {
-      width: 60%;
+      flex: 1 1 60%; 
     }
 
     .even {
-      width: 30%;
+      flex: 1 1 30%;
     }
 
     .diagram-item img {
       width: 100%;
       height: auto;
-      padding: 2rem;
     }
   }
 }
 
-/* 
-* ==========================================================================
-* Footer and footer navigation 
-* ==========================================================================
-*/
-footer {
-  padding: 2rem 2rem 1rem 2rem;
-  background: rgb(51, 51, 51);
-  color: rgb(246, 243, 237);
-}
-
-.footer-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.footer-row a,
-.footer-row p {
-  color: rgb(246, 243, 237);
-  font-style: normal;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.footer-col:nth-child(2) {
-  text-align: right;
-}
-
-.social {
-  text-align: center;
-}
-
-.social>a>i {
-  padding: .5rem;
-  font-size: 1.8rem;
-  color: #fff;
-}
-
-.copyright {
-  text-align: center;
-}
 
 /* 
 * ==========================================================================
 * Media Queries
 * ==========================================================================
 */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+
 
   p,
   li {
-    font-size: 12px;
+    font-size: 1rem;
   }
 
-  h2,
-  h4 {
-    font-size: 1.1rem;
-  }
+  // h2,
+  // h4 {
+  //   font-size: 1.4rem;
+  // }
 
   .container {
     padding-top: 3rem;
@@ -399,6 +399,10 @@ footer {
   }
 
   #featured {
+    li {
+      font-size: 1rem;
+    }
+
     #aside-l {
       grid-column: 1/2;
     }
@@ -416,11 +420,14 @@ footer {
     }
 
     .intro {
-      grid-column: 3/7;
+      grid-column: 2/8;
 
-      h2 {
+      .header-style {
+        background: none; 
+        display: inherit;
         padding: 2rem;
         font-size: 2rem;
+        line-height: 2.4rem;
       }
     }
 
@@ -430,15 +437,15 @@ footer {
   }
 
   #gallery {
+    h2 {
+      margin: 0;
+    }
+
     .gallery-links {
-      width: 80%;
+      width: 100%;
 
       .gallery-item {
         width: 50%;
-      }
-
-      .gallery-item:hover>a>.overlay-text {
-        visibility: none;
       }
 
       .gallery-item6 {
@@ -471,16 +478,40 @@ footer {
   }
 
   #contact {
-    .myform {
+    .contact-form {
       width: 90%;
 
       form {
-        padding: 2rem;
+        padding: 1rem;
+
+        h2 {
+          margin: 0;
+          padding: 2rem 0 0 0;
+        }
       }
     }
-  }
 
+  }
+  #diagrams {
+    .diagram-gallery {
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+  }
   .footer-row {
     padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #diagrams {
+    h2 {
+      margin-bottom: 1rem;
+    }
+    .diagram-gallery .odd,
+    .diagram-gallery .even {
+      flex-basis: 100%; 
+      padding: 1rem; 
+    }
   }
 }
