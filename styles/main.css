@@ -351,7 +351,7 @@ footer {
   }
   .container {
     padding-top: 3rem;
-    margin-bottom: 1rem;
+    padding-bottom: 2rem;
   }
   #featured li {
     font-size: 1rem;
@@ -386,7 +386,7 @@ footer {
     margin: 0;
   }
   #gallery .gallery-links {
-    width: 100%;
+    width: 85%;
   }
   #gallery .gallery-links .gallery-item {
     width: 50%;
