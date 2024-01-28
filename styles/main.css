@@ -429,11 +429,11 @@ footer {
 }
 @media (max-width: 576px) {
   #diagrams h2 {
-    margin-bottom: 1rem;
+    margin: 0 1.5rem 1rem 1.5rem;
   }
   #diagrams .diagram-gallery .odd,
   #diagrams .diagram-gallery .even {
     flex-basis: 100%;
-    padding: 1rem;
+    padding: 3rem;
   }
 }/*# sourceMappingURL=main.css.map */
