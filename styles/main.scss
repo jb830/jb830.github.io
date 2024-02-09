@@ -47,6 +47,10 @@ a {
   color: $secondary-color;
 }
 
+h2 {
+  @include main-heading
+}
+
 ul {
   list-style: none;
   padding: 0;
