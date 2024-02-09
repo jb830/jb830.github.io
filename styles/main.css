@@ -28,9 +28,19 @@ a {
   color: rgb(51, 51, 51);
 }
 
+h2 {
+  margin-bottom: 2rem;
+  font-family: "Sanchez", serif;
+  text-align: center;
+}
+
 ul {
   list-style: none;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* 
