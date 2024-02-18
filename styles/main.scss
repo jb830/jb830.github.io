@@ -48,7 +48,7 @@ a {
 }
 
 h2 {
-  @include main-heading
+  @include main-heading;
 }
 
 ul {
