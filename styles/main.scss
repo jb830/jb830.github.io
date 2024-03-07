@@ -240,7 +240,7 @@ footer {
 
   h2 {
     @include main-heading();
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 
   p {
@@ -269,7 +269,7 @@ footer {
           line-height: 1;
         }
 
-        padding: 1rem;
+        padding: .5rem;
         line-height: 1;
         text-align: center;
         max-width: inherit;
