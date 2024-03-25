@@ -19,24 +19,60 @@
 </head>
 
 <body>
-  <main role="main">
+  <nav class="navbar navbar-expand-lg home-nav">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link current" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#gallery">Recent Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">Who I am</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#skills">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="brumfield-diagrams.html">Databse Diagrams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="api-unit-tests.html">API Unit Testing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="presentations.html">API Unit Testing</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Get in Touch</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
     <div id="featured">
 
       <div id="aside-l"></div>
       <div id="aside-r"></div>
 
       <div class="intro">
-
-        <h2 class="header-style md"><span>Hi, I'm Jo, <br>I like to design and build web applications</span>.</h2>
-
+        <img src="images/me.jpg" class="sml-img rounded-circle m-auto">
+        <h2 class="header-style md"></h2>
       </div>
       <div class="side-line"></div>
-      <img src="images/me4.jpg" alt="A profile picture of Joanna and her family hiking" height="100%" width="100%">
+      <img src="images/me4.jpg" alt="A profile picture of Joanna and her family hiking" class="lg-img" height="100%"
+        width="100%">
       <div class="line"></div>
       <div class="welcome">
         <h1>Welcome!</h1>
       </div>
-      <ul>
+      <ul class="lg-nav">
         <li>
           <a href="#gallery" class="nav-btn">Recent Projects</a>
         </li>
@@ -51,7 +87,10 @@
         </li>
         <li>
           <a href="api-unit-tests.html" class="nav-btn">API unit testing</a>
-        </li>        
+        </li>
+        <li>
+          <a href="Presentations.html" class="nav-btn">presentations</a>
+        </li>
         <li>
           <a href="#contact" class="nav-btn">Lets Get in Touch!</a>
         </li>
@@ -65,65 +104,116 @@
 
     <section class="container" id="gallery">
       <h2>Recent Projects</h2>
-      <div class="gallery-links">
-        <figure class="gallery-item gallery-item6">
+      <div class="gallery-links row">
+        <figure class="gallery-item gallery-item6 col-lg-4 col-md-6 col-sm-1">
           <a href="https://four20-capstone.onrender.com/api-docs">
             <img src="./images/api.png" alt="" width="100%" height="100%">
-            <div class="overlay-text">
-              <h4>API project</h4>
-              <p>API created for hypothetical sports teams built with 
-                Express & MongoDB. Basic GET, PUT, and DELETE operations for teams and players</p>
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4>API Project</h4>
+                <p>API created for hypothetical sports teams built with
+                  Express & MongoDB. Basic GET, PUT, and DELETE operations for teams and players</p>
+              </div>
             </div>
           </a>
         </figure>
-        <figure class="gallery-item gallery-item1">
+        <figure class="gallery-item col-lg-4 col-md-6 col-sm-1">
           <a href="https://jb830.github.io/bioSite/">
-            <img src="./images/Asset 1.png" width="100%" height="100%" alt="">
-            <div class="overlay-text">
-              <h4>The Biosite</h4>
-              <p>This projects demonstrates using HTML and CSS to create static websites.</p>
+            <img src="./images/html.png" width="100%" height="100%" alt="">
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4>The Biosite</h4>
+                <p>This projects demonstrates using HTML and CSS to create static websites.</p>
+              </div>
             </div>
           </a>
         </figure>
 
-        <figure class="gallery-item gallery-item4">
+        <figure class="gallery-item col-lg-4 col-md-6 col-sm-1">
           <a href="https://github.com/jb830/Web-330">
             <img src="./images/jsII.png" alt="" width="100%" height="100%">
-            <div class="overlay-text">
-              <h4>WEB-330 Repository</h4>
-              <p>This repository illustrates the different projects I have been doing while learning
-                JavaScript concepts</p>
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4>WEB-330 Repository</h4>
+                <p>This repository illustrates the different projects I have been doing while learning
+                  JavaScript concepts</p>
+              </div>
             </div>
           </a>
         </figure>
-        
-        <figure class="gallery-item gallery-item3">
+
+        <figure class="gallery-item col-lg-4 col-md-6 col-sm-1">
           <a href="https://github.com/jb830/web-335">
             <img src="images/noSQL.png" alt="" width="100%" height="100%">
-            <div class="overlay-text">
-              <h4>WEB-335 Repository</h4>
-              <p>This repository illustrates the different projects I did while learning noSQL concepts with MongoDB and Python
-              </p>
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4>WEB-335 Repository</h4>
+                <p>This repository illustrates the different projects I did while learning noSQL concepts with MongoDB
+                  and Python
+                </p>
+              </div>
             </div>
           </a>
         </figure>
 
-        <figure class="gallery-item gallery-item5">
+        <figure class="gallery-item col-lg-4 col-md-6 col-sm-1">
           <a href="https://github.com/jb830/web-340">
             <img src="images/node.png" alt="" width="100%" height="100%">
-            <div class="overlay-text">
-              <h4>WEB-340</h4>
-              <p>This repository illustrates the different projects I have been doing while learning Node & Express</p>
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4>WEB-340</h4>
+                <p>This repository illustrates the different projects I have been doing while learning Node & Express
+                </p>
+              </div>
             </div>
           </a>
         </figure>
 
-        <figure class="gallery-item gallery-item6">
+        <figure class="gallery-item col-lg-4 col-md-6 col-sm-1">
           <a href="https://jb830.github.io/whatAbook-prototype/index.html">
             <img src="./images/What-A-Book.png" alt="" width="100%" height="100%">
-            <div class="overlay-text">
-              <h4>What-A-Book Prototype</h4>
-              <p>Prototype for noSQL capstone project</p>
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4>What-A-Book Prototype</h4>
+                <p>Prototype for noSQL capstone project</p>
+              </div>
+            </div>
+          </a>
+        </figure>
+        <figure class="gallery-item col-lg-4 col-md-6 col-sm-1">
+          <a href="">
+            <img src="images/mean.png" alt="" width="100%" height="100%">
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4></h4>
+                <p>
+                </p>
+              </div>
+            </div>
+          </a>
+        </figure>
+
+        <figure class="gallery-item col-lg-4 col-md-6 col-sm-1">
+          <a href="#presentations">
+            <img src="images/presentations.png" alt="" width="100%" height="100%">
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4>Presentations</h4>
+                <p>Presentations for DevOps course.
+                </p>
+              </div>
+            </div>
+          </a>
+        </figure>
+
+        <figure class="gallery-item col-lg-4 col-md-6 col-sm-1">
+          <a href="https://github.com/jb830/web-425">
+            <img src="./images/angular.png" alt="" width="100%" height="100%">
+            <div class="overlay-text d-flex align-items-center">
+              <div class="text-box">
+                <h4>Web-425 Repository</h4>
+                <p>Illustrates different projects I've done while learning TypeScript and the Angular framework</p>
+              </div>
             </div>
           </a>
         </figure>
